@@ -1,0 +1,15 @@
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+dados = {
+    "Região": ["Sul", "Sudeste", "Centro-Oeste", "Nordeste", "Norte"],
+    "Vendas": [35000, 52000, 27000, 31000, 18000]
+}
+
+df = pd.DataFrame(dados)
+
+sns.barplot(x="Região", y="Vendas", data=df, palette="magma")
+
+plt.title("Vendas por Região")
+plt.show()
